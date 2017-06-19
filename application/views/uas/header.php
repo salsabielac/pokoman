@@ -35,47 +35,47 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="<?php echo base_url('index.php/ekstra/home') ?>">Ekstrakulikuler</a>
+                <a class="navbar-brand" href="<?php echo base_url('ekstra/home') ?>">Ekstrakulikuler</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="<?php echo base_url('index.php/ekstra/home') ?>">Home</a>
+                        <a href="<?php echo base_url('ekstra/home') ?>">Home</a>
                     </li>
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Olahraga<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo base_url('index.php/ekstra/basket') ?>">Basket</a></li>
-                        <li><a href="<?php echo base_url('index.php/ekstra/futsal') ?>">Futsal</a></li>
-                        <li><a href="<?php echo base_url('index.php/ekstra/karate') ?>">Karate</a></li>
-                        <li><a href="<?php echo base_url('index.php/ekstra/volly') ?>">Volly</a></li>
+                        <li><a href="<?php echo base_url('ekstra/basket') ?>">Basket</a></li>
+                        <li><a href="<?php echo base_url('ekstra/futsal') ?>">Futsal</a></li>
+                        <li><a href="<?php echo base_url('ekstra/karate') ?>">Karate</a></li>
+                        <li><a href="<?php echo base_url('ekstra/volly') ?>">Volly</a></li>
                     </ul>
                     </li>
 
                     <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown">Seni<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo base_url('index.php/ekstra/band') ?>">Band</a></li>
-                        <li><a href="<?php echo base_url('index.php/ekstra/drumband') ?>">DrumBand</a></li>
-                        <li><a href="<?php echo base_url('index.php/ekstra/padus') ?>">Padus</a></li>
+                        <li><a href="<?php echo base_url('ekstra/band') ?>">Band</a></li>
+                        <li><a href="<?php echo base_url('ekstra/drumband') ?>">DrumBand</a></li>
+                        <li><a href="<?php echo base_url('ekstra/padus') ?>">Padus</a></li>
                     </ul>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('index.php/kegiatan') ?>">Kegiatan</a>
+                        <a href="<?php echo base_url('kegiatan') ?>">Kegiatan</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('index.php/ekstra/daftar') ?>">Daftar Ekstrakulikuler</a>
+                        <a href="<?php echo base_url('ekstra/daftar') ?>">Daftar Ekstrakulikuler</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('index.php/ekstra/tampil') ?>">Data Ekstrakulikuler</a>
+                        <a href="<?php echo base_url('ekstra/tampil') ?>">Data Ekstrakulikuler</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url ('index.php/login/register')?>">Register</a>
+                        <a href="<?php echo base_url ('login/register')?>">Register</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url ('index.php/login')?>">Login</a>
+                        <a href="<?php echo base_url ('login')?>">Login</a>
                     </li>
                 </ul>
             </div>
