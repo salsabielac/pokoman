@@ -72,6 +72,9 @@
                         <a href="<?php echo base_url('ekstra/tampil') ?>">Data Ekstrakulikuler</a>
                     </li>
                     <li>
+                        <a href="<?php echo base_url('cetak')?>">Cetak</a>
+                    </li>
+                    <li>
                         <a href="<?php echo base_url ('login/register')?>">Register</a>
                     </li>
                     <li>
