@@ -26,7 +26,7 @@ class Ekstra extends CI_Controller
 	}
 
 	public function datatable_ajax(){
-		$this->load->view('uas/tampil2');
+		$this->load->view('uas/tampil');
 	}
 
 	public function data_server(){

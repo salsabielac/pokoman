@@ -47,5 +47,64 @@
     <!-- Theme JavaScript -->
     <script src="<?php echo base_url('uas/js/clean-blog.min.js') ?>"></script>
     
+    <!-- Data Tables -->
+    <script src="<?=base_url()?>bower_components/DataTables/datatables.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#example').DataTable({
+            "processing":true,
+            "serverSide":true,
+            "lenghtMenu":[[1,3,6,-1],[1,3,6,"All"]],
+            "ajax":{
+                url : "<?php echo site_url('Ekstra/data_server') ?>",
+                type : "POST"
+            },
+            "columnDefs":
+            [
+                {
+                    "targets":0,
+                    "data":"name",
+                },
+                {
+                    "targets":1,
+                    "data":"address",
+                },
+                {
+                    "targets":2,
+                    "data":"email",
+                },
+                {
+                    "targets":3,
+                    "data":"telephone",
+                },
+                {
+                    "targets":4,
+                    "data":"class",
+                },
+                {
+                    "targets":5,
+                    "data":"ekstra",
+                },
+                {
+                    "targets":6,
+                    "data":null,
+                    "searchable":false,
+                    "render":function(data,type,full,meta){
+                        return '<a href="<?site_url()?>/Ekstra/update/'+data["id"]+'">Update</a>'
+                    }
+                },
+                                {
+                    "targets":7,
+                    "data":null,
+                    "searchable":false,
+                    "render":function(data,type,full,meta){
+                        return '<a href="<?site_url()?>/Ekstra/delete/'+data["id"]+'">Delete</a>'
+                    }
+                },
+
+            ]
+        });
+    });
+    </script>
 </body>
 </html>

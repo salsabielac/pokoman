@@ -16,6 +16,9 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="<?php echo base_url('bower_components/bootstrap/dist/css/bootstrap.min.css') ?>">
 
+    <!-- Data Tables -->
+    <link href="<?=base_url()?>bower_components/DataTables/datatables.min.css">
+    
     <!-- Theme CSS -->
     <link rel="stylesheet" href="<?php echo base_url('uas/css/clean-blog.css') ?>">
 
