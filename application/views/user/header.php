@@ -66,10 +66,16 @@
                     </ul>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('kegiatan') ?>"> Lapor Kegiatan</a>
+                        <a href="<?php echo base_url('kegiatan') ?>">Kegiatan</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url('ekstra/daftar') ?>">Daftar Ekstrakulikuler</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('ekstra/tampil') ?>">Data Ekstrakulikuler</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('cetak')?>">Cetak</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url ('login/register')?>">Register</a>

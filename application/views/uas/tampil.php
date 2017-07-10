@@ -1,3 +1,7 @@
+<?php 
+	$this->load->view('uas/header');
+	$session_data = $this->session->userdata('logged_in');
+?>
 <br><br><br><br>
 <div class="container">
 <div class="table-responsive">
@@ -30,3 +34,6 @@
 </table>
 </div>
 </div>
+<?php
+$this->load->view('uas/footer');
+?>
