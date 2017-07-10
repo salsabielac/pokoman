@@ -1,4 +1,4 @@
-<?php $this->load->view('ekstra/header-siswa');  ?>
+<?php $this->load->view('ekstra/header-siswa') ?>
 
 <br>
 <br>
@@ -7,11 +7,6 @@
 
 <div class="container">
 	<div class="row">
-	<?php echo form_open_multipart('kegiatan/save')?>
-		<div class="col-md-12">
-			<!-- Notif Save end -->
-		</div>
-		<?php echo form_close(); ?>
 		
 		<?php foreach($show as $data): ?> 	
 		<div class="col-md-12">
@@ -29,3 +24,6 @@
 	<?php endforeach; ?>
 </div>
 </div>
+
+
+<?php $this->load->view('ekstra/footer') ?>

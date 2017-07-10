@@ -11,10 +11,10 @@ class Kegiatan extends CI_Controller
 	}
 
 	public function index(){
-		$this->load->view('uas/header');
+		//$this->load->view('uas/header');
 		$data['show']=$this->Kegiatan_model->getPhoto();
 		$this->load->view('uas/Kegiatan_view',$data);
-		$this->load->view('uas/footer');
+		//$this->load->view('uas/footer');
 	}
 
 	public function hapus($id){

@@ -1,50 +1,46 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller {
+
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('ekstra');
-		$this->load->helper('url','form');
+		$this->load->model('Siswa_model');
 		$this->load->library('form_validation');
 		
 	}
 	public function index()
 	{
-		$this->load->view('login_view');
+		$this->load->view('ekstra/login_view');
 	}
 	public function cekLogin()
 	{
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('username', 'username', 'trim|required');
-		//callback_cekDb ->cekDb merupakan nama function
-		$this->form_validation->set_rules('pass', 'pass', 'trim|required|callback_cekDb');
-		if($this->form_validation->run()==FALSE){
-			$this->load->view('login_view');
+		$this->form_validation->set_rules('nis', 'nis', 'trim|required');
+		$this->form_validation->set_rules('password', 'password', 'trim|required|callback_cekDb');
+
+		if ($this->form_validation->run() == FALSE) {
+			$this->load->view('ekstra/login_view');
+			//var_dump($_POST);
 		}else{
+			//redirect('Home','refresh');
 			if ($this->session->userdata('logged_in')) {
 				$session_data = $this->session->userdata('logged_in');
-					if ($session_data['role'] == 'admin') {
-						redirect('Home','refresh');
-					}elseif($session_data['role'] == 'ekstra'){
-						redirect('Ekstra','refresh');
-					}
+				redirect('home','refresh');
 			}
+			
 		}
 	}
 	public function cekDb($password)
 	{
-		$username=$this->input->post('username');
-		$result=$this->user->login($username,$password);
+		$nis=$this->input->post('nis');
+		$result = $this->Siswa_model->login($nis,$password);
 		if($result){
-			$sess_array=array();
+			$sess_array = array();
 			foreach ($result as $row) {
-				$sess_array=array(
-					'id'=>$row->id,
-					'username'=>$row->username,
-					'ava'=>$row->ava,
-					'role'=>$row->role
-					);
+				$sess_array = array(
+					'id' => $row->id,
+					// 'nis'=> $row->nis,
+				);
 				$this->session->set_userdata('logged_in',$sess_array);
 			}
 			return true;
@@ -62,18 +58,19 @@ class Login extends CI_Controller {
 	
 	public function register()
 	{
-		$this->form_validation->set_rules('name', 'name', 'trim|required');
-		$this->form_validation->set_rules('address', 'address', 'trim|required');
+		$this->form_validation->set_rules('nis', 'nis', 'trim|required');
+		$this->form_validation->set_rules('password', 'password', 'trim|required');
+		$this->form_validation->set_rules('fullname', 'fullname', 'trim|required');
 		$this->form_validation->set_rules('email', 'email', 'trim|required');
-		$this->form_validation->set_rules('telephone', 'telephone', 'trim|required');
-		$this->form_validation->set_rules('class', 'class', 'trim|required');
-		$this->form_validation->set_rules('ekstra', 'ekstra', 'trim|required');	
+		$this->form_validation->set_rules('kelas', 'kelas', 'trim|required');
+		$this->form_validation->set_rules('telp', 'telp', 'trim|required');	
 
 		
 		if($this->form_validation->run()==FALSE){
-			$this->load->view('uas/daftar');
+			$this->load->view('ekstra/register');
+			var_dump($_POST);
 		}else{
-			$this->user->register();
+			$this->Siswa_model->daftar();
 			redirect('login');
 		}
 		

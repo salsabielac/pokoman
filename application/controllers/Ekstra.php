@@ -5,19 +5,13 @@ class Ekstra extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('form_validation');
-		$this->load->model('ekstra_model');
-		// if($this->session->userdata('logged_in')){
-		// 	$session_data = $this->session->userdata('logged_in');
-		// 	$data['username'] = $session_data['username'];
-		// }else{
-		// 	redirect('login','refresh');
-		// }
+		$this->load->model('Ekstra_model');
 	}
 
 	public function index(){
-		$this->load->view('uas/header');
-		$this->load->view('uas/home');
-		$this->load->view('uas/footer');
+		
+		$this->load->view('ekstra/home-siswa');
+		
 	}
 
 	public function datatable(){
@@ -155,5 +149,37 @@ class Ekstra extends CI_Controller
 		$this->load->view('uas/Kegiatan_view');
 		$this->load->view('uas/footer');
 	}
+
+
+	public function pilih(){
+
+		$this->form_validation->set_rules('fk_siswa','fk_siswa','required');
+        $this->form_validation->set_rules('pilih_ekstra','pilih_ekstra','required');
+        
+
+        if($this->form_validation->run() == FALSE){
+            // $this->load->model('Category_model');
+            // $data['category'] = $this->Category_model->getAll();
+            $this->load->view('ekstra/pilih_ekskul');
+        }else{
+            $this->Ekstra_model->insertEkstra();
+			redirect('home','refresh');	
+        }
+	}
+
+	public function anda(){
+
+		if ($this->session->userdata('logged_in')) {
+            $session_data = $this->session->userdata('logged_in');
+            $data['id'] = $session_data['id'];
+            
+        }else{
+            redirect('login','refresh');
+        }
+
+		$data['anda'] = $this->Ekstra_model->ekstraSiswa($session_data['id']);
+		$this->load->view('ekstra/siswa_ekskul',$data);
+	}
+
 }
 ?>

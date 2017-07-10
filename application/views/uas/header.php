@@ -14,18 +14,16 @@
     <title>Ekstrakulikuler</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('bower_components/bootstrap/dist/css/bootstrap.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/clean/vendor/bootstrap/css/bootstrap.min.css') ?>">
 
     <!-- Data Tables -->
     <link href="<?=base_url()?>bower_components/DataTables/datatables.min.css">
     
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('uas/css/clean-blog.css') ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/clean/css/clean-blog.css') ?>">
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="<?php echo base_url('uas/vendor/font-awesome/css/font-awesome.css') ?>">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+   
 </head>
 <body>
 

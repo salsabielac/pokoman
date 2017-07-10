@@ -1,22 +1,25 @@
 <?php
 class Ekstra_model extends CI_Model
 {
-	function __construct()
-	{
-		parent::__construct();
-	}
+
 
 	public function insertEkstra(){
-		$object=array
+		$object = array
 		(
-			'name'=>$this->input->post('name'),
-			'address'=>$this->input->post('address'),
-			'email'=>$this->input->post('email'),
-			'telephone'=>$this->input->post('telephone'),
-			'class'=>$this->input->post('class'),
-			'ekstra'=>$this->input->post('ekstra'),
+			'fk_siswa'     => $this->input->post('fk_siswa'),
+			'nama_ekskul'  => $this->input->post('pilih_ekstra'),
+			
 		);
-		$this->db->insert('ekstra',$object);
+		$this->db->insert('tb_ekstra',$object);
+	}
+
+	public function ekstraSiswa($id){
+		$this->db->select('*');
+		$this->db->from('tb_ekstra');
+		$this->db->join('tb_siswa','tb_siswa.id = tb_ekstra.fk_siswa','left');
+		$this->db->where('fk_siswa',$id);
+		$read = $this->db->get();
+        return $read->result();
 	}
 
 	public function getEkstra(){

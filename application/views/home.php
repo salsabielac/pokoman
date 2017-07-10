@@ -1,3 +1,5 @@
+<?php var_dump($_SESSION) ?>
+
 <center>
     <h1>Halo Ini Belajar Code Igniter&nbsp;<i class="em em-grinning"></i></h1>
     <div class="container">
