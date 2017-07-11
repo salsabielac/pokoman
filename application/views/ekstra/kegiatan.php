@@ -12,13 +12,12 @@
 		<div class="col-md-12">
 			<div class="panel panel-primary wow fadeInUp">
 				<div class="panel-heading">
-					<h3 class="panel-title ">Kegiatan Ekstrakulikuler</h3>
-					<!-- <a href="<?= base_url('index.php/').'kegiatan/edit/'.$data->id ?>" class="btn btn-primary pull-right wow bounce"><i class="glyphicon glyphicon-pencil"></i></a> -->
-					<!-- <a href="<?= base_url('index.php/').'kegiatan/hapus/'.$data->id ?>" class="btn btn-danger pull-right wow bounce"><i class="glyphicon glyphicon-trash"></i></a> -->
+					<h1 class="panel-title "><?= $data->n_kegiatan ?></h1>
 				</div>
 				<div class="panel-body">
-					<img src="<?php echo base_url('gambar/upload/') ?><?php echo $data->photo ?>" class="img-responsive" alt="Image">
+					<img src="<?php echo base_url('gambar/upload/') ?><?php echo $data->img_kegi ?>" class="img-responsive" alt="Image">
 				</div>
+					<h3><?= $data->d_kegiatan ?></h3>
 			</div>
 		</div>
 	<?php endforeach; ?>

@@ -20,6 +20,8 @@ class Siswa_model extends CI_Model {
 
 	}
 
+
+
 	public function daftar(){
 		$object = array
 		(

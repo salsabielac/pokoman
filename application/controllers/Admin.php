@@ -9,19 +9,62 @@ class Admin extends CI_Controller
 		parent::__construct();
 		$this->load->model('Admin_model');
 		$this->load->library('form_validation');
+
+
 	}
 
 	public function index(){
+
+		// $this->load->model('Kegiatan_model');
+		// $data['anda'] = $this->Kegiatan_model->getKegiatan();
+		// $this->load->view('ekstra/adm_dashboard',$data);
+
 		$this->load->view('ekstra/adm_login');
+
 	}
 
 	public function kegiatan(){
-		$this->load->view('ekstra/tambah_kegiatan');
+
+		$this->form_validation->set_rules('title','title','trim|required');
+		$this->form_validation->set_rules('descrip','descrip','trim|required');	
+		$this->form_validation->set_rules('tgl','tgl','trim|required');
+
+		if ($this->form_validation->run() === FALSE) {
+			$this->load->view('ekstra/tambah_kegiatan');
+		}else {
+
+			$config['upload_path'] = 'gambar/upload';
+			$config['allowed_types'] = 'gif|jpg|png';
+        	$config['max_size'] = '1000000000';
+
+        	$this->load->library('upload', $config);
+
+        	if(!$this->upload->do_upload('image')){
+        		$err = array('error' => $this->upload->display_errors());
+        		var_dump($err); 
+        		var_dump($_POST);
+        	}else{
+
+	        $image_data = $this->upload->data();				
+        	$this->Admin_model->kegiatan();
+        	
+        	$this->session->set_flashdata('msg_success', 'Story has been created');
+        	redirect('admin','refresh');
+			}
+		}
 	}
 
 
 	public function dashboard(){
-		$this->load->view('ekstra/adm_dashboard');
+		$this->load->model('Kegiatan_model');
+		$data['anda'] = $this->Kegiatan_model->getKegiatan();
+		$this->load->view('ekstra/adm_dashboard',$data);
+	}
+
+	public function data_siswa(){
+		$this->load->model('Ekstra_model');
+		$data['anda'] = $this->Ekstra_model->siswa();
+		$this->load->view('ekstra/adm_data_siswa',$data);
 	}
 
 	public function cekLogin()

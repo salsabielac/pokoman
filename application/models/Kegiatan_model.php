@@ -2,8 +2,9 @@
 
 class Kegiatan_model extends CI_Model
 {
-	public function getPhoto(){
-		$view=$this->db->get('kegiatan');
+
+	public function getKegiatan(){
+		$view=$this->db->get('tb_kegiatan');
 		return $view->result();
 	}
 
@@ -30,6 +31,9 @@ class Kegiatan_model extends CI_Model
 		}else{
 			return false;
 		}
+	}
+
+	public function edit($id){
 
 	}
 

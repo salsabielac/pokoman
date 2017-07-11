@@ -14,13 +14,13 @@
 		<a class="navbar-brand" href="#">Ekskul Beneran</a>
 		<ul class="nav navbar-nav">
 			<li class="active">
-				<a href="#">Home</a>
+				<a href="<?= base_url('admin/dashboard') ?>">Home</a>
 			</li>
 			<li>
-				<a href="<?= base_url('admin/siswa') ?>">Data Siswa</a>
+				<a href="<?= base_url('admin/data_siswa') ?>">Data Siswa</a>
 			</li>
 			<li>
-				<a href="<?= base_url('admin/kegiatan') ?>">Kegiatan</a>
+				<a href="<?= base_url('admin/dashboard') ?>">Kegiatan</a>
 			</li>
 			<li>
 				<a href="<?= base_url('login/logout') ?>">Keluar</a>

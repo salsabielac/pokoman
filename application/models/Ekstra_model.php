@@ -22,6 +22,29 @@ class Ekstra_model extends CI_Model
         return $read->result();
 	}
 
+	public function siswa(){
+		$this->db->select('*');
+		$this->db->from('tb_ekstra');
+		$this->db->join('tb_siswa','tb_siswa.id = tb_ekstra.fk_siswa','left');
+		
+		$read = $this->db->get();
+        return $read->result();
+	}
+
+	public function getbyId(){
+
+		$this->db->from('tb_siswa');
+		$this->db->where('id',$id);
+		$getById = $this->db->get();
+
+		if($getById->num_rows() == 1){
+			return $getById->result();
+		}else{
+			return false;
+		}
+
+	}
+
 	public function getEkstra(){
 		$query=$this->db->get('ekstra');
 		return $query->result();
