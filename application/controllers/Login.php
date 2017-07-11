@@ -53,7 +53,7 @@ class Login extends CI_Controller {
 	{
 		$this->session->unset_userdata('logged_in');
 		$this->session->sess_destroy();
-		redirect('login','refresh');
+		redirect('ekstra/home','refresh');
 	}
 	
 	public function register()

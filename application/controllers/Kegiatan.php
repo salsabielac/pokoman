@@ -48,7 +48,7 @@ class Kegiatan extends CI_Controller
 	        $image_data = $this->upload->data();
         	$this->Admin_model->edit($id);
         	$this->session->set_flashdata('msg_success', 'Story has been update');
-        	redirect('admin','refresh');
+        	redirect('admin/dashboard','refresh');
 				}
 			}
 	}
@@ -69,7 +69,7 @@ class Kegiatan extends CI_Controller
 			$this->session->set_flashdata('msg_err', 'Data gagal Dihapus :(');
 		}
 
-		redirect('admin','refresh');	
+		redirect('admin/dashboard','refresh');	
 
 	}
 }

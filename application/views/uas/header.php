@@ -45,29 +45,11 @@
                     <li>
                         <a href="<?php echo base_url('ekstra/home') ?>">Home</a>
                     </li>
-                    <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Olahraga<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="<?php echo base_url('ekstra/basket') ?>">Basket</a></li>
-                        <li><a href="<?php echo base_url('ekstra/futsal') ?>">Futsal</a></li>
-                        <li><a href="<?php echo base_url('ekstra/karate') ?>">Karate</a></li>
-                        <li><a href="<?php echo base_url('ekstra/volly') ?>">Volly</a></li>
-                    </ul>
-                    </li>
-
-                    <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Seni<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="<?php echo base_url('ekstra/band') ?>">Band</a></li>
-                        <li><a href="<?php echo base_url('ekstra/drumband') ?>">DrumBand</a></li>
-                        <li><a href="<?php echo base_url('ekstra/padus') ?>">Padus</a></li>
-                    </ul>
+                    <li>
+                        <a href="<?php echo base_url('ekstra/olahraga') ?>">Olahraga</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('kegiatan') ?>"> Lapor Kegiatan</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo base_url('ekstra/daftar') ?>">Daftar Ekstrakulikuler</a>
+                        <a href="<?php echo base_url('ekstra/seni') ?>">Seni</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url ('login/register')?>">Register</a>

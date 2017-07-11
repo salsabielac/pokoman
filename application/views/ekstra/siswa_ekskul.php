@@ -4,6 +4,19 @@
 				$data['id'] = $session_data['id'];
 			}
 ?>
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url('http://localhost:8080/pokoman/assets/clean/img/buku.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="page-heading">
+                    <h1>EKSTRAKULIKULER</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 <div class="container">
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -22,13 +35,13 @@
 							</tr>
 						</thead>
 						<tbody>
+							<?php foreach($anda as $babon): ?>
 							<tr>
-								<?php foreach($anda as $babon): ?>
 								<td><?= $babon->fullname ?></td>
 								<td><?= $babon->nis ?></td>
 								<td><?= $babon->nama_ekskul ?></td>
-								<?php endforeach;?>
 							</tr>
+							<?php endforeach;?>
 						</tbody>
 					</table>
 				</div>

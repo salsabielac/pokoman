@@ -49,7 +49,7 @@ class Admin extends CI_Controller
         	$this->Admin_model->kegiatan();
         	
         	$this->session->set_flashdata('msg_success', 'Story has been created');
-        	redirect('admin','refresh');
+        	redirect('admin/dashboard','refresh');
 			}
 		}
 	}

@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Ekstrakulikuler</h1>
+                        <h1>SENI</h1>
                         <hr class="small">
                         <span class="subheading">Tingkatkan Softskill Bersama Kami</span>
                     </div>
@@ -19,28 +19,38 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
-                    <a href="<?php echo base_url('index.php/ekstra/olahraga') ?>">
+                    <a href="<?php echo base_url('index.php/ekstra/band') ?>">
                         <h2 class="post-title">
-                            OLAHRAGA
+                            BAND
                         </h2>
                         <h3 class="post-subtitle">
-                            Bergabunglah dengan tim olahraga andalan kami.
+                            Tingkatkan kualitas bermusikmu dengan bergabung bersama kami.
                         </h3>
                     </a>
                 </div>
                 <hr>
                 <div class="post-preview">
-                    <a href="<?php echo base_url('index.php/ekstra/seni') ?>">
+                    <a href="<?php echo base_url('index.php/ekstra/drumband') ?>">
                         <h2 class="post-title">
-                           SENI
+                            DRUMBAND
                         </h2>
                         <h3 class="post-subtitle">
-                            Seimbangkan otak kiri dan kanan anda dengan bergabung bersama kami.
+                            Bergabunglah dengan tim drumband andalan kami.
                         </h3>
                     </a>
                 </div>
                 <hr>
-
+                <div class="post-preview">
+                    <a href="<?php echo base_url('index.php/ekstra/padus') ?>">
+                        <h2 class="post-title">
+                           PADUS
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Asah bakat bernyanyi anda bersama kami.
+                        </h3>
+                    </a>
+                </div>
+                <hr>
             </div>
         </div>
     </div>

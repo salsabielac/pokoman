@@ -29,7 +29,7 @@ class Cetak extends CI_Controller
 		$dompdf = new DOMPDF();
 		$this->dompdf->load_html($html);
 		$this->dompdf->render();
-		$this->dompdf->stream('laporan.pdf');
+		$this->dompdf->stream('laporan_eks.pdf');
 
 		unset($html);
 		unset($dompdf);
